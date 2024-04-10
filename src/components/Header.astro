@@ -1,0 +1,29 @@
+---
+import GitHub from "../icons/GitHubIcon.astro";
+import LinkedIn from "../icons/LinkedInIcon.astro";
+import Email from "../icons/EmailIcon.astro";
+---
+
+<div class="fixed top-0 left-0 right-0 h-10 bg-[#202020] z-5"></div>
+<header class="fixed z-10 w-full top-2 right-5 md:right-[15%]">
+    <nav class="flex items-center justify-end w-full gap-x-3">
+        <!-- <button
+            type="button"
+            data-drawer-target="{drawer-contact}"
+            data-drawer-toggle="{drawer-contact}"
+            class="text-[#202020] bg-[#D1D1D1] hover:bg-red-900 hover:text-[#D1D1D1] font-medium rounded-sm text-sm py-[0.1rem] px-[1rem] text-center inline-flex items-center me-2"
+        >
+            <Email />
+        </button> -->
+
+        <a
+            href="https://www.linkedin.com/in/miguel-arias-fullstack/"
+            target="_blank"
+        >
+            <LinkedIn class="transition size-6 md:size-5 hover:scale-110" />
+        </a>
+        <a href="https://github.com/pankelix" target="_blank">
+            <GitHub class="transition size-6 md:size-[1.35rem] hover:scale-110" />
+        </a>
+    </nav>
+</header>
