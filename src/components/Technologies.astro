@@ -12,6 +12,8 @@ import MongoDB from "../icons/MongoDBIcon.astro";
 import GIT from "../icons/GITIcon.astro";
 import GitHub from "../icons/GitHubIcon.astro";
 import Figma from "../icons/FigmaIcon.astro";
+import Angular from "../icons/AngularIcon.astro";
+import Typescript from "../icons/TypescriptIcon.astro";
 ---
 
 <div class="grid items-center grid-cols-2 gap-4 md:grid-cols-6">
@@ -27,6 +29,20 @@ import Figma from "../icons/FigmaIcon.astro";
     >
         <React class="size-12" />
         <h1>React</h1>
+    </aside>
+
+    <aside
+        class="flex max-w-xs flex-col items-center space-y-2 rounded-lg border border-neutral-800 p-4 bg-[#5544]"
+    >
+        <Typescript class="size-12" />
+        <h1>TypeScript</h1>
+    </aside>
+
+    <aside
+        class="flex max-w-xs flex-col items-center space-y-2 rounded-lg border border-neutral-800 p-4 bg-[#5544]"
+    >
+        <Angular class="size-12" />
+        <h1>Angular</h1>
     </aside>
 
     <aside
@@ -105,6 +121,4 @@ import Figma from "../icons/FigmaIcon.astro";
         <Figma class="size-12" />
         <h1>Figma</h1>
     </aside>
-
-
 </div>
