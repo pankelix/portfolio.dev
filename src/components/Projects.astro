@@ -4,6 +4,13 @@ import Link from "../icons/LinkIcon.astro";
 
 const PROJECTS = [
     {
+        title: "DnD Spell Manager ",
+        description: "🧙‍♂️ Manage your DnD spells easily",
+        demo: "https://dnd-spell-manager.vercel.app/",
+        github: "https://github.com/pankelix/dnd-spell-manager",
+        tags: ["JavaScript", "TypeScript", "NextJS", "React", "Tailwind"],
+    },
+    {
         title: "Tiddy ",
         description: "🧽 Periodic Chores Manager",
         demo: "https://tiddy.netlify.app/",
@@ -20,28 +27,12 @@ const PROJECTS = [
     },
     {
         title: "FakE-Commerce ",
-        description: "🧽 An e-Commerce of fake items",
+        description: "🛒 An e-Commerce of fake items",
         demo: "https://pankel-fake-ecommerce.netlify.app/",
         github: "https://github.com/pankelix/store/tree/deploy",
         images: ["https://i.imgur.com/ssW1z9Z.png"],
         tags: ["Angular", "TypeScript", "Tailwind"],
-    } /* ,
-    {
-        title: "My next project",
-        description: "Otro proyecto futuro",
-        demo: "www.google.es",
-        github: "https://github.com/pankelix/Tiddy-APP/tree/main",
-        images: ["https://i.imgur.com/ssW1z9Z.png"],
-        tags: [
-            "JavaScript",
-            "MongoDB",
-            "ExpressJS",
-            "React",
-            "NodeJS",
-            "Tailwind",
-        ],
-    }, */,
-    ,
+    },
 ];
 ---
 
@@ -49,9 +40,12 @@ const PROJECTS = [
     PROJECTS.map(({ title, description, tags, images, github, demo }) => (
         <article class="flex flex-col p-4 border rounded-md border-neutral-800 min-w-72">
             <div class="flex items-center justify-between">
-                <a class="flex items-center gap-2" href={demo} target="_blank">
+                <a class="flex items-center gap-6" href={demo} target="_blank">
                     <h3 class="text-xl font-semibold">{title}</h3>
-                    <Link />
+                    <div class="flex gap-1">
+                        <Link />
+                        <p class="text-sm text-neutral-400">try demo</p>
+                    </div>
                 </a>
                 <a href={github} target="_blank">
                     <GitHubIcon class="size-5" />
