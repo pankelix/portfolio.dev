@@ -1,0 +1,29 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<nav class="mt-5 mb-10 flex flex-wrap justify-center gap-4">
+	<a
+		href="/"
+		class={`px-4 py-2 rounded-lg border transition-colors duration-200
+			${pathname === "/" ? "bg-grey-500 text-white" : "border-neutral-700 text-grey-400 hover:bg-grey-600 hover:text-white"}`}
+	>
+		Web & APP Developer
+	</a>
+
+	<a
+		href="/design"
+		class={`px-4 py-2 rounded-lg border transition-colors duration-200
+			${pathname === "/design" ? "bg-grey-500 text-white" : "border-neutral-700 text-grey-400 hover:bg-grey-600 hover:text-white"}`}
+	>
+		Graphic Design
+	</a>
+
+	<a
+		href="/illustration"
+		class={`px-4 py-2 rounded-lg border transition-colors duration-200
+			${pathname === "/illustration" ? "bg-grey-500 text-white" : "border-neutral-700 text-grey-400 hover:bg-grey-600 hover:text-white"}`}
+	>
+		Illustration
+	</a>
+</nav>

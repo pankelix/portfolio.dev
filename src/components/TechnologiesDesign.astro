@@ -1,0 +1,28 @@
+---
+import TechnologyCard from "./TechnologyCard.astro";
+import Adobe from "../icons/AdobeIcon.astro";
+import Figma from "../icons/FigmaIcon.astro";
+import Photoshop from "../icons/PhotoshopIcon.astro";
+import Illustrator from "../icons/IllustratorIcon.astro";
+import Premiere from "../icons/PremiereIcon.astro";
+import AfterEffects from "../icons/AfterEffectsIcon.astro"
+import InDesign from "../icons/InDesignIcon.astro"
+import Canva from "../icons/CanvaIcon.astro"
+
+const technologies = [
+  { icon: Adobe, name: "Adobe" },
+  { icon: Figma, name: "Figma" },
+  { icon: Photoshop, name: "Photoshop" },
+  { icon: Illustrator, name: "Illustrator" },
+  { icon: Premiere, name: "Premiere" },
+  { icon: AfterEffects, name: "AfterEffects" },
+  { icon: InDesign, name: "InDesign" },
+  { icon: Canva, name: "Canva" },
+];
+---
+
+<div class="grid grid-cols-2 gap-4 md:grid-cols-6 items-center">
+  {technologies.map((tech) => (
+    <TechnologyCard icon={tech.icon} name={tech.name} />
+  ))}
+</div>

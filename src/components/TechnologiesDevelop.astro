@@ -1,0 +1,38 @@
+---
+import TechnologyCard from "./TechnologyCard.astro";
+import React from "../icons/ReactIcon.astro";
+import JavaScript from "../icons/JavaScriptIcon.astro";
+import Node from "../icons/NodeIcon.astro";
+import Express from "../icons/ExpressIcon.astro";
+import CSS from "../icons/CSSIcon.astro";
+import TailWind from "../icons/TailWindIcon.astro";
+import SASS from "../icons/SASSIcon.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import MongoDB from "../icons/MongoDBIcon.astro";
+import GIT from "../icons/GITIcon.astro";
+import GitHub from "../icons/GitHubIcon.astro";
+import Angular from "../icons/AngularIcon.astro";
+import Typescript from "../icons/TypescriptIcon.astro";
+
+const technologies = [
+  { icon: JavaScript, name: "JavaScript" },
+  { icon: React, name: "React" },
+  { icon: Typescript, name: "TypeScript" },
+  { icon: Angular, name: "Angular" },
+  { icon: Node, name: "Node" },
+  { icon: Express, name: "Express" },
+  { icon: CSS, name: "CSS" },
+  { icon: TailWind, name: "Tailwind" },
+  { icon: SASS, name: "SASS" },
+  { icon: AstroIcon, name: "Astro" },
+  { icon: MongoDB, name: "MongoDB" },
+  { icon: GIT, name: "GIT" },
+  { icon: GitHub, name: "GitHub" },
+];
+---
+
+<div class="grid grid-cols-2 gap-4 md:grid-cols-6 items-center">
+  {technologies.map((tech) => (
+    <TechnologyCard icon={tech.icon} name={tech.name} />
+  ))}
+</div>

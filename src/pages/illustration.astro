@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import ProjectsIllustration from "../components/ProjectsIllustration.astro";
+import TechnologiesIllustration from "../components/TechnologiesIllustration.astro";
+import Resume from "../icons/Resume.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="Portfolio de Miguel Arias - Desarrollador y Programador Web"
+    description="Full Stack Developer | React | Mocha/Chai Testing | NodeJS | Express | MongoDB | Tailwind | Sass | Mongoose | Git | Astro | HTML | CSS | Adobe"
+>
+    <main>
+        <section class="flex flex-col w-full mt-40 mb-16 md:mb-24">
+            <img
+                class="rounded-full w-[15rem] h-[15rem] mb-2"
+                src="https://i.imgur.com/9hVY0Pq.jpeg"
+                alt="the b&w picture of Miguel Arias smiling to camera"
+            />
+            <div>
+                <h1
+                    class="text-3xl md:text-4xl max-w-[30rem] md:max-w-full text-[#eaeaea] md:text-pretty"
+                >
+                    Miguel Arias
+                </h1>
+                <h1
+                    class="text-3xl md:text-4xl font-bold max-w-[30rem] md:max-w-full text-[#eaeaea] md:text-pretty"
+                >
+                    FullStack Developer and Graphic Designer
+                </h1>
+            </div>
+            <div class="flex mt-2">
+                <h2 class="mt-1">
+                    <a
+                        href="https://www.linkedin.com/in/miguel-arias-fullstack/"
+                        target="_blank"
+                        rel="noopener"><Badge>Job Hunting_Remote</Badge></a
+                    >
+                </h2>
+
+                <div class="flex">
+                    <h1 class="mt-1">
+                        <a
+                            href="https://drive.google.com/file/d/1ySmctgAfcTQgjcpkLW_3SuAjpzw4dOPW/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <span
+                                class="bg-green-900 text-green-300 text-md font-medium me-2 px-2.5 py-0.5 rounded"
+                                >Check my resume</span
+                            >
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Nav />
+
+    <h2 class="mb-2 opacity-50">Featured Projects</h2>
+    <section class="mb-16 md:mb-24 md:grid md:grid-cols-2 md:gap-4">
+        <ProjectsIllustration />
+    </section>
+
+    <h2 class="mb-2 opacity-50">Technologies used</h2>
+    <section>
+        <TechnologiesIllustration />
+    </section>
+</Layout>
+
+<Footer />

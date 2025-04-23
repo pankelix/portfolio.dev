@@ -1,0 +1,10 @@
+---
+const { icon: Icon, name } = Astro.props;
+---
+
+<aside
+  class="flex flex-col items-center space-y-2 rounded-lg border border-neutral-800 p-4 bg-[#5544] transition-transform hover:scale-105 hover:border-white"
+>
+  <Icon class="size-12" />
+  <h1 class="text-sm text-white text-center">{name}</h1>
+</aside>

@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import Technologies from "../components/Technologies.astro";
-import Projects from "../components/Projects.astro";
+import TechnologiesDevelop from "../components/TechnologiesDevelop.astro";
+import ProjectsDevelop from "../components/ProjectsDevelop.astro";
 import Resume from "../icons/Resume.astro";
 import LinkIcon from "../icons/LinkIcon.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -57,19 +59,17 @@ import LinkIcon from "../icons/LinkIcon.astro";
 		</section>
 	</main>
 
+	<Nav />
+
 	<h2 class="mb-2 opacity-50">Featured Projects</h2>
 	<section class="mb-16 md:mb-24 md:grid md:grid-cols-2 md:gap-4">
-		<Projects />
+		<ProjectsDevelop />
 	</section>
 
+	<h2 class="mb-2 opacity-50">Technologies used</h2>
 	<section>
-		<Technologies />
+		<TechnologiesDevelop />
 	</section>
 </Layout>
 
-<footer class="flex items-center justify-center h-20 mt-5 md:mt-16">
-	<a href="https://www.linkedin.com/in/miguel-arias-fullstack/"
-		><h2 class="text-xl font-semibold">Miguel Arias</h2></a
-	>
-	<h4 class="text-xl">- 2024</h4>
-</footer>
+<Footer />

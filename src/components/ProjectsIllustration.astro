@@ -1,0 +1,60 @@
+---
+import Link from "../icons/LinkIcon.astro";
+
+const PROJECTS = [
+    {
+        title: "Mu Instagram",
+        description:
+            "The best place to see my new drawings and paintings",
+        demo: "https://www.instagram.com/pankelx/?hl=es",
+        image: "/illustration_project_3.jpg",
+    },
+    {
+        title: "Children's book",
+        client: "Client: Anónimo",
+        description:
+            "Complete creation process for a children's story for a client. From character design, storyboard, typography, and narrative, to the final design. Unfortunately, the project was never published",
+        demo: "https://drive.google.com/file/d/1j9ZwpU7Joo4DkqAraYCayYmiN2jI_CZY/view?usp=sharing",
+        image: "/illustration_project_1.jpg",
+    },
+    {
+        title: "Retratos de monos",
+        description: "Made with charcoal and sanguine",
+        demo: "https://drive.google.com/file/d/1KdG7Jce_SsVLPnSdERinJuZxYkP0o_qi/view?usp=sharing",
+        image: "/illustration_project_2.jpg",
+    },
+    {
+        title: "Storyboards",
+        client: "Client: Anónimo",
+        description: "Fragments of storyboards and loose sketches",
+        demo: "https://drive.google.com/file/d/1VowKU4SY_0iPMbG7qRJ99L5exxTlzdux/view?usp=sharing",
+        image: "/illustration_project_4.jpg",
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, client, description, image, demo }) => (
+        <article class="flex flex-col p-4 border rounded-md border-neutral-800 min-w-72">
+            <div class="flex items-center justify-between">
+                <a class="flex items-center gap-6" href={demo} target="_blank">
+                    <h3 class="text-xl font-semibold">{title}</h3>
+
+                    {demo && (
+                        <div class="flex gap-1">
+                            <Link />
+                            <p class="text-sm text-neutral-400">
+                                See the project
+                            </p>
+                        </div>
+                    )}
+                </a>
+            </div>
+            {client && <h2 class="text-lg">{client}</h2>}
+            <p class="mt-1 text-xs">{description}</p>
+            {image && (
+                <img src={image} alt={title} class="w-full h-auto mt-5" />
+            )}
+        </article>
+    ))
+}

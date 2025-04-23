@@ -1,0 +1,20 @@
+---
+import TechnologyCard from "./TechnologyCard.astro";
+import Adobe from "../icons/AdobeIcon.astro";
+import Photoshop from "../icons/PhotoshopIcon.astro";
+import Illustrator from "../icons/IllustratorIcon.astro";
+import Procreate from "../icons/ProcreateIcon.astro"
+
+const technologies = [
+  { icon: Adobe, name: "Adobe" },
+  { icon: Photoshop, name: "Photoshop" },
+  { icon: Illustrator, name: "Illustrator" },
+  { icon: Procreate, name: "Procreate" },
+];
+---
+
+<div class="grid grid-cols-2 gap-4 md:grid-cols-6 items-center">
+  {technologies.map((tech) => (
+    <TechnologyCard icon={tech.icon} name={tech.name} />
+  ))}
+</div>

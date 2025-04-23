@@ -1,0 +1,63 @@
+---
+import Link from "../icons/LinkIcon.astro";
+
+const PROJECTS = [
+    {
+        title: "QR Stickers",
+        client: "Client: CartaMóvil",
+        description: "A prettier way to share the menu of a restaurant",
+        demo: "https://drive.google.com/file/d/18viGIT4MDLhhh-vp9hwHWFy895H0el68/view?usp=sharing",
+        image: "/design_project_1.jpg",
+    },
+    {
+        title: "Advertisement spots",
+        client: "Client: Desktime Spain",
+        description:
+            "In charge of storyboarding, directing, acting, and video editing, accompanied by Julián Hernández as assistant and cameraman",
+        demo: "https://www.youtube.com/watch?v=o-Hgacy8q98&list=PLfSZLrYHNgwV9JeeHXRuFcBE7MaABOmur&pp=gAQB",
+        image: "/design_project_2.jpg",
+    },
+    {
+        title: "Videotutorial",
+        client: "Client: ControlGPS",
+        description:
+            "In charge of storyboarding, direction, and video editing, accompanied by Julián Hernández as assistant and cameraman and Draghisa Sakhirovski as actor",
+        demo: "https://www.youtube.com/watch?v=DqAC8WWl3t0&list=PLfSZLrYHNgwXOm_3Th435u1joaJhPbs1X&pp=gAQB",
+        image: "/design_project_3.jpg",
+    },
+    {
+        title: "Amazon Products",
+        client: "Client: GPSLowCost",
+        description:
+            "Series of images for use with an Amazon product. The intention is to briefly and visually explain the main functions, highlighting it among other products and creating a sense of professionalism and corporate cohesion",
+        demo: "https://www.amazon.es/GPSLOWCOST-Localizador-GPS-Auto-instalable/dp/B0B77K5X3W",
+        image: "/design_project_4.jpg",
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, client, description, image, demo }) => (
+        <article class="flex flex-col p-4 border rounded-md border-neutral-800 min-w-72">
+            <div class="flex items-center justify-between">
+                <a class="flex items-center gap-6" href={demo} target="_blank">
+                    <h3 class="text-xl font-semibold">{title}</h3>
+
+                    {demo && (
+                        <div class="flex gap-1">
+                            <Link />
+                            <p class="text-sm text-neutral-400">
+                                See the project
+                            </p>
+                        </div>
+                    )}
+                </a>
+            </div>
+            <h2 class="text-lg">{client}</h2>
+            <p class="mt-1 text-xs h-10">{description}</p>
+            {image && (
+                <img src={image} alt={title} class="max-h-72 w-full object-contain h-auto mt-5" />
+            )}
+        </article>
+    ))
+}
