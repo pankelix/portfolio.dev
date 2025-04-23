@@ -38,7 +38,7 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ title, client, description, image, demo }) => (
-        <article class="flex flex-col p-4 border rounded-md border-neutral-800 min-w-72">
+        <article class="flex flex-col p-4 border rounded-md border-neutral-800 min-w-72 mb-4 md:mb-0">
             <div class="flex items-center justify-between">
                 <a class="flex items-center gap-6" href={demo} target="_blank">
                     <h3 class="text-xl font-semibold">{title}</h3>
@@ -54,7 +54,7 @@ const PROJECTS = [
                 </a>
             </div>
             <h2 class="text-lg">{client}</h2>
-            <p class="mt-1 text-xs h-10">{description}</p>
+            <p class="mt-1 text-xs">{description}</p>
             {image && (
                 <img src={image} alt={title} class="max-h-72 w-full object-contain h-auto mt-5" />
             )}
