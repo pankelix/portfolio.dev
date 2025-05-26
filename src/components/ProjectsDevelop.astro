@@ -4,6 +4,13 @@ import Link from "../icons/LinkIcon.astro";
 
 const PROJECTS = [
     {
+        title: "SWATSA Website ",
+        description: "Website for the company SWATSA, who provides security for vessels and ports",
+        demo: "https://www.swatsa.com/",
+        github: "",
+        tags: ["JavaScript", "TypeScript", "NextJS", "React", "Firebase", "Tailwind"],
+    },
+    {
         title: "DnD Spell Manager ",
         description: "🧙‍♂️ Manage your DnD spells easily",
         demo: "https://dnd-spell-manager.vercel.app/",
@@ -47,9 +54,9 @@ const PROJECTS = [
                         <p class="text-sm text-neutral-400">try demo</p>
                     </div>
                 </a>
-                <a href={github} target="_blank">
+                {github && <a href={github} target="_blank">
                     <GitHubIcon class="size-5" />
-                </a>
+                </a>}
             </div>
             <p class="mt-1 text-xs">{description}</p>
             <ul class="grid grid-cols-3 mt-5">
